@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import {LangContext} from "../../context/LangContextProvider";
 
 const content = {
   nl: {
@@ -13,10 +14,12 @@ const content = {
 };
 
 function Home() {
+    const {language} = useContext(LangContext);
+
   return (
     <div className="page-container">
-      <h2>{content.nl.title}</h2>
-      <p>{content.nl.introText}</p>
+      <h2>{content[language].title}</h2>
+      <p>{content[language].introText}</p>
     </div>
   );
 }
