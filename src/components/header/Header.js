@@ -46,9 +46,9 @@ function Header() {
                 {content[language].menuItems.allPlants}
               </NavLink>
               </li>
-            <li className="language-switch">
+            <li onClick={setLanguage} className="language-switch">
               <p>{content[language].changeTo}</p>
-              {language === 'nl' ? <FlagNL onClick={setLanguage}/> : <FlagES onClick={setLanguage}/>}
+              {language === 'nl' ? <FlagNL /> : <FlagES />}
             </li>
           </ul>
         </nav>
